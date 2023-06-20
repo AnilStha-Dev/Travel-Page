@@ -5,3 +5,72 @@
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
 }
+:root{
+    --font-color: #020406;
+    --background-color: linear-gradient(#2980B9,#6DD5FA,#FFFFFF);
+    --btn--color:#0ED2F7;
+    
+}
+.header{
+    height: 100vh;
+    width: 100%;
+   background-image: linear-gradient(rgba(159, 151, 151, 0.4),rgba(121, 200, 218, 0.4)),url('https://images.unsplash.com/photo-1494783367193-149034c05e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1% 6%;
+    
+}
+.header nav img{
+    width: 50px;
+}
+.nav-links li{
+    list-style-type: none;
+    display: inline-block;
+   padding: 8px 20px;
+   
+}
+.nav-links li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--font-color);
+    font-weight: bold;
+    position: relative;
+    font-size: 1.2rem;
+}
+.nav-links li a::after{
+    content:"";
+    width: 0%;
+    height: 3px;
+    background:var(--btn--color);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: 0.5s;
+}
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+.header .text-area{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+ 
+}
+.header .text-area h3{
+    font-size: 3rem;
+}
+.header .text-area p{
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+}
+
