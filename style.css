@@ -7,10 +7,12 @@
 }
 :root{
     --font-color: #020406;
-    --background-color: linear-gradient(#2980B9,#6DD5FA,#FFFFFF);
+    --background-color:darkgrey;
     --btn--color:#0ED2F7;
+   
     
 }
+/* nav section */
 .header{
     height: 100vh;
     width: 100%;
@@ -57,6 +59,10 @@ nav{
 .nav-links li a:hover::after{
     width: 100%;
 }
+.nav-links li a:hover{
+    
+    color: var(--btn--color);
+}
 
 .header .text-area{
     width: 100%;
@@ -73,4 +79,134 @@ nav{
     font-size: 1rem;
     padding: 10px;
 }
+
+/* next section */
+.destination-page{
+    min-height: 100vh;
+    width: 100%;
+    background:linear-gradient(
+        rgba(88, 84, 84, 0.5),
+        rgba(116, 116, 121, 0.5));
+
+}
+.destination-page h3{
+    text-align: center;
+   padding: 10px;
+    font-size: 3rem;
+}
+.destination-page p{
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+   row-gap: 20px;
+   column-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.row .destination-col{
+    
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background: var(--background-color);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   margin-bottom: 40px;
+}
+.row .destination-col img{
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+}
+.row .destination-col:hover{
+    transition: 0.9s;
+    transform: translateY(-20px);
+}
+/* about us page */
+.about-us{
+    width: 100%;
+    height:100vh;
+    background: rgb(241, 236, 236);
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.container .content-section{
+    margin: 15px;
+    width: 50%;
+    
+}
+.container .content-section .title{
+    padding: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.container .content-section .content h3{
+   padding: 10px;
+    font-size: 1.2rem;
+}
+.container .content-section .content p{
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.container .content-section .button{
+    margin: 10px;
+}
+.container .content-section .button button{
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.container .content-section .button button span{
+     background: var(--btn--color); 
+     width: 0%;
+     height: 100%;
+     border-radius: 20px;
+     position: absolute;
+     left: 0;
+     top: 0;
+     transition: 0.5s;
+   
+}
+.container .content-section .button button:hover span{
+    width: 100%;
+    z-index: -1;
+}
+.container .content-section .social{
+    margin: 20px;
+}
+.container .content-section .social i{
+    font-size: 22px;
+    margin-right: 10px;
+    color: blue;
+
+}
+
+.container .image-section{
+    margin: 15px;
+    
+}
+.container .image-section img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 500px;
+}
+
+
+ 
 
